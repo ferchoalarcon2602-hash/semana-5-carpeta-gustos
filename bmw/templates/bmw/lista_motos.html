@@ -1,0 +1,71 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar motos</title>
+
+    <link rel="stylesheet"
+          href="{% static 'bmw/css/style.css' %}">
+</head>
+
+<body>
+
+<section class="seccion">
+
+    <h2>ADMINISTRAR <span>MOTOS</span></h2>
+
+    <a href="{% url 'crear_moto' %}" class="boton">
+        + REGISTRAR MOTO
+    </a>
+
+    <div class="contenedor-motos">
+
+        {% for moto in motos %}
+
+        <article class="tarjeta-moto">
+
+            {% if moto.imagen %}
+                <img src="{{ moto.imagen }}"
+                     alt="{{ moto.modelo }}">
+            {% endif %}
+
+            <div class="informacion-moto">
+
+                <h3>{{ moto.marca }} {{ moto.modelo }}</h3>
+
+                <p>Cilindraje: {{ moto.cilindraje }} cc</p>
+
+                <p>
+                    Velocidad: {{ moto.velocidad_maxima }} km/h
+                </p>
+
+                <p>Precio: ${{ moto.precio }}</p>
+
+                <a href="{% url 'editar_moto' moto.id %}">
+                    EDITAR
+                </a>
+
+                <a href="{% url 'eliminar_moto' moto.id %}">
+                    ELIMINAR
+                </a>
+
+            </div>
+
+        </article>
+
+        {% empty %}
+
+        <p>No hay motos registradas.</p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+</body>
+</html>

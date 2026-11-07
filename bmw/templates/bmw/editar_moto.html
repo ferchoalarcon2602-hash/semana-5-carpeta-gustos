@@ -1,0 +1,39 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar moto</title>
+    <link rel="stylesheet"
+          href="{% static 'bmw/css/style.css' %}">
+</head>
+
+<body>
+
+<section class="seccion">
+
+    <h2>EDITAR <span>MOTO</span></h2>
+
+    <form method="POST" class="formulario-crud">
+
+        {% csrf_token %}
+
+        {{ formulario.as_p }}
+
+        <button type="submit">
+            ACTUALIZAR MOTO
+        </button>
+
+        <a href="{% url 'lista_motos' %}">
+            Cancelar
+        </a>
+
+    </form>
+
+</section>
+
+</body>
+</html>

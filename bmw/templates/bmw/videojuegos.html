@@ -1,0 +1,167 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MotoSport | Videojuegos</title>
+
+    <link rel="stylesheet"
+          href="{% static 'bmw/css/style.css' %}">
+
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <a href="{% url 'index' %}" class="logo">
+        MOTO<span>SPORT</span>
+    </a>
+
+    <nav class="menu">
+
+        <a href="{% url 'index' %}">
+            Volver a motos
+        </a>
+
+        <a href="#catalogo">
+            Videojuegos
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="portada">
+
+    <div class="contenido-portada">
+
+        <p class="subtitulo">
+            DESCUBRE NUEVAS AVENTURAS
+        </p>
+
+        <h1>
+            MUNDO DE LOS<br>
+            <span>VIDEOJUEGOS</span>
+        </h1>
+
+        <p class="descripcion">
+            Explora videojuegos gratuitos de diferentes
+            géneros y plataformas.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="seccion" id="catalogo">
+
+    <h2>CATÁLOGO DE <span>VIDEOJUEGOS</span></h2>
+
+    <p class="texto-seccion">
+        Encuentra tu próximo videojuego favorito.
+    </p>
+
+
+    <!-- BUSCADOR -->
+
+    <form method="GET" class="buscador-juegos">
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Buscar videojuegos..."
+            value="{{ busqueda }}"
+        >
+
+        <button type="submit">
+            BUSCAR
+        </button>
+
+    </form>
+
+
+    <!-- VIDEOJUEGOS -->
+
+    <div class="contenedor-motos">
+
+        {% for juego in juegos %}
+
+        <article class="tarjeta-moto tarjeta-videojuego">
+
+            <img
+                src="{{ juego.thumbnail }}"
+                alt="{{ juego.title }}"
+                loading="lazy"
+            >
+
+            <div class="informacion-moto">
+
+                <h3>{{ juego.title }}</h3>
+
+                <p>
+                    {{ juego.short_description }}
+                </p>
+
+                <span class="etiqueta">
+                    {{ juego.genre }}
+                </span>
+
+                <p>
+                    Plataforma: {{ juego.platform }}
+                </p>
+
+                <a
+                    href="{{ juego.game_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton-juego"
+                >
+                    VER VIDEOJUEGO
+                </a>
+
+            </div>
+
+        </article>
+
+        {% empty %}
+
+        <p>
+            No se encontraron videojuegos.
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+    <p class="credito-api">
+        Información proporcionada por
+        <a href="https://www.freetogame.com/"
+           target="_blank">
+            FreeToGame
+        </a>.
+    </p>
+
+</section>
+
+
+<footer class="pie">
+
+    <p>© 2026 MotoSport</p>
+
+    <p>Velocidad, tecnología y entretenimiento.</p>
+
+</footer>
+
+</body>
+</html>

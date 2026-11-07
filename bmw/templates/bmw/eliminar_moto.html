@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar moto</title>
+</head>
+
+<body>
+
+<h2>ELIMINAR MOTOCICLETA</h2>
+
+<p>
+    ¿Estás seguro de eliminar
+    {{ moto.marca }} {{ moto.modelo }}?
+</p>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    <button type="submit">
+        SÍ, ELIMINAR
+    </button>
+
+    <a href="{% url 'lista_motos' %}">
+        CANCELAR
+    </a>
+
+</form>
+
+</body>
+</html>

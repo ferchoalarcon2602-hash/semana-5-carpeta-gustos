@@ -1,0 +1,466 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101010;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 8%;
+    background-color: #080808;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #b6ff00;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #b6ff00;
+}
+
+/* PORTADA PRINCIPAL */
+
+.portada {
+    min-height: 600px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.75) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-portada {
+    max-width: 700px;
+}
+
+.subtitulo {
+    color: #b6ff00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.contenido-portada h1 {
+    color: #ffffff;
+    font-size: clamp(36px, 5vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.contenido-portada h1 span {
+    color: #b6ff00;
+}
+
+.descripcion {
+    color: #dddddd;
+    font-size: 17px;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* BOTÓN */
+
+.boton {
+    display: inline-block;
+    padding: 15px 28px;
+    background-color: #b6ff00;
+    color: #101010;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.seccion h2,
+.acerca h2 {
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.seccion h2 span,
+.acerca h2 span {
+    color: #b6ff00;
+}
+
+.texto-seccion {
+    color: #aaaaaa;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* TARJETAS DE MARCAS */
+
+.contenedor-marcas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.tarjeta-marca {
+    background-color: #191919;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 35px 22px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta-marca:hover {
+    transform: translateY(-6px);
+    border-color: #b6ff00;
+}
+
+.tarjeta-marca h3 {
+    color: #b6ff00;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-marca p {
+    color: #bbbbbb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* SECCIÓN DE MOTOS */
+
+.seccion-motos {
+    background-color: #151515;
+}
+
+.contenedor-motos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+/* TARJETAS DE MOTOS */
+
+.tarjeta-moto {
+    background-color: #202020;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta-moto:hover {
+    transform: translateY(-6px);
+    border-color: #b6ff00;
+}
+
+.tarjeta-moto img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    object-fit: cover;
+}
+
+.informacion-moto {
+    padding: 22px;
+}
+
+.informacion-moto h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.informacion-moto p {
+    color: #bbbbbb;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #b6ff00;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* SECCIÓN NOSOTROS */
+
+.acerca {
+    padding: 85px 15%;
+    text-align: center;
+    background-color: #101010;
+}
+
+.acerca p {
+    max-width: 800px;
+    margin: 20px auto 0;
+    color: #bbbbbb;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* PIE DE PÁGINA */
+
+.pie {
+    background-color: #080808;
+    padding: 28px 20px;
+    text-align: center;
+    border-top: 1px solid #292929;
+}
+
+.pie p {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .contenedor-marcas,
+    .contenedor-motos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .encabezado {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .portada {
+        min-height: 500px;
+        padding: 60px 7%;
+        background-position: center;
+    }
+
+    .contenido-portada h1 {
+        font-size: 36px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    .seccion {
+        padding: 60px 7%;
+    }
+
+    .seccion h2,
+    .acerca h2 {
+        font-size: 27px;
+    }
+
+    .contenedor-marcas,
+    .contenedor-motos {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-moto img {
+        height: 250px;
+    }
+
+    .acerca {
+        padding: 60px 7%;
+    }
+}
+
+
+/* PAGINA DE VIDEOJUEGOS */
+
+.buscador-juegos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 35px auto;
+    max-width: 600px;
+}
+
+.buscador-juegos input {
+    flex: 1;
+    padding: 14px;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.buscador-juegos button {
+    padding: 14px 25px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tarjeta-videojuego {
+    background: #181818;
+    transition: .3s;
+}
+
+.tarjeta-videojuego:hover {
+    transform: translateY(-7px);
+}
+
+.tarjeta-videojuego img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.boton-juego {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.boton-juego:hover {
+    background: #bd2635;
+}
+
+.credito-api {
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media(max-width: 600px) {
+    .buscador-juegos {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* CRUD MOTOS */
+
+.formulario-crud {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #1c1c1c;
+    border-radius: 12px;
+}
+
+.formulario-crud p {
+    margin-bottom: 18px;
+    color: white;
+}
+
+.formulario-crud input,
+.formulario-crud textarea,
+.formulario-crud select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #292929;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+.formulario-crud button {
+    background: #e63946;
+    color: white;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.formulario-crud button:hover {
+    background: #b92735;
+}

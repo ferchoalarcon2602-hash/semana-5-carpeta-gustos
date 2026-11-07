@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MotoSport | Mundo de las motos</title>
+
+    <link rel="stylesheet" href="{% static 'bmw/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <a href="#" class="logo">MOTO<span>SPORT</span></a>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#marcas">Marcas</a>
+            <a href="#motos">Motos deportivas</a>
+            <a href="#nosotros">Nosotros</a>
+
+            <a href="{% url 'videojuegos' %}">
+                Videojuegos
+            </a>
+            <a href="{% url 'lista_motos' %}">
+                ADMINISTRAR MOTOS
+            </a>
+        </nav>
+    </header>
+
+    <section class="portada" id="inicio">
+        <div class="contenido-portada">
+            <p class="subtitulo">VIVE LA VELOCIDAD</p>
+
+            <h1>EL MUNDO DE LAS<br>
+                <span>MOTOS DEPORTIVAS</span>
+            </h1>
+
+            <p class="descripcion">
+                Descubre las mejores marcas, conoce sus características
+                y encuentra tu próxima moto favorita.
+            </p>
+
+            <a href="#motos" class="boton">EXPLORAR MOTOS</a>
+        </div>
+    </section>
+
+    <section class="seccion" id="marcas">
+        <h2>NUESTRAS <span>MARCAS</span></h2>
+
+        <p class="texto-seccion">
+            Conoce las marcas más reconocidas del mundo de las motos.
+        </p>
+
+        <div class="contenedor-marcas">
+            <article class="tarjeta-marca">
+                <h3>BMW</h3>
+                <p>Ingeniería alemana, tecnología y alto rendimiento.</p>
+            </article>
+
+            <article class="tarjeta-marca">
+                <h3>SUZUKI</h3>
+                <p>Diseño deportivo, potencia y tradición japonesa.</p>
+            </article>
+
+            <article class="tarjeta-marca">
+                <h3>KAWASAKI</h3>
+                <p>Estilo agresivo y espíritu deportivo.</p>
+            </article>
+
+            <article class="tarjeta-marca">
+                <h3>BAJAJ</h3>
+                <p>Opciones para ciudad y motos como la NS400Z.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion seccion-motos" id="motos">
+        <h2>MOTOS <span>DESTACADAS</span></h2>
+
+        <p class="texto-seccion">
+            Explora algunos modelos que destacan por su diseño y desempeño.
+        </p>
+
+        <div class="contenedor-motos">
+
+            <article class="tarjeta-moto">
+                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80"
+                    alt="Motocicleta deportiva">
+                <div class="informacion-moto">
+                    <h3>BMW S 1000 RR</h3>
+                    <p>Una deportiva reconocida por su tecnología y potencia.</p>
+                    <span class="etiqueta">BMW MOTORRAD</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-moto">
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80"
+                    alt="Motocicleta deportiva japonesa">
+                <div class="informacion-moto">
+                    <h3>Suzuki GSX-R</h3>
+                    <p>Una familia de motos diseñada con inspiración deportiva.</p>
+                    <span class="etiqueta">SUZUKI</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-moto">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80"
+                    alt="Motocicleta de estilo deportivo">
+                <div class="informacion-moto">
+                    <h3>Kawasaki Ninja</h3>
+                    <p>Diseño deportivo y modelos para diferentes experiencias.</p>
+                    <span class="etiqueta">KAWASAKI</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-moto">
+                <img src="https://images.unsplash.com/photo-1558980394-0c9b9c8e7a3a?auto=format&fit=crop&w=900&q=80"
+                    alt="Motocicleta de estilo naked">
+                <div class="informacion-moto">
+                    <h3>Pulsar NS400Z</h3>
+                    <p>Una naked de mayor cilindraje para conocer y comparar.</p>
+                    <span class="etiqueta">BAJAJ</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="acerca" id="nosotros">
+        <h2>PASIÓN POR LAS <span>MOTOS</span></h2>
+
+        <p>
+            MotoSport es un espacio para aprender sobre motocicletas,
+            descubrir marcas, comparar especificaciones y conocer
+            las novedades del mundo de las dos ruedas.
+        </p>
+    </section>
+
+    <footer class="pie">
+        <p>© 2026 MotoSport | Proyecto académico Django</p>
+        <p>Velocidad, tecnología y pasión por las motos.</p>
+    </footer>
+
+</body>
+
+</html>
